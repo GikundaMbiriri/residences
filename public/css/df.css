@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.red {
+    color: red;
+}
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 250px; /* Footer height */
+}
+.exceptional {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: brown;
+}
+.top {
+    background-image: url("https://hotel-rooms-filter.netlify.app/static/media/room-2.052c7681.jpeg");
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+.about-body {
+    width: 50vw;
+    margin: auto;
+    height: 80vh;
+}
+.about-cont {
+    padding: 20px;
+    position: relative;
+}
+.about-head {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.hero {
+    position: absolute;
+    width: inherit;
+    height: 500px;
+}
+.hero img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+.cont {
+    font-size: 20px;
+
+    color: #660033;
+    font-family: "Open Sans", sans-serif;
+}
+footer {
+    bottom: 0px;
+    height: 100px;
+    width: 100vw;
+    background-color: rgb(228, 224, 224);
+    margin-top: 200px;
+    position: absolute;
+    color: white;
+}
+.danger {
+    color: red;
+}
+.cont2 {
+    width: 50vw;
+    margin: auto;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="file"],
+input[type="number"],
+select,
+textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+    background-color: #04aa6d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container1 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 50vw;
+    margin: auto;
+}
+@media only screen and (max-width: 600px) {
+    .about-body {
+        width: 100vw;
+    }
+    .container1 {
+        width: 100vw;
+    }
+}

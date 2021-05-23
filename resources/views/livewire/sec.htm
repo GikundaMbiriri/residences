@@ -1,0 +1,51 @@
+
+        @foreach ($res as $re)
+        {{ $re->name }}
+        {{ $re->occ }}
+        {{ $re->image }}
+
+        {{-- =====start of card===== --}}
+        <div style="margin-top: 50px; display: flex; justify-content:space-between; flex-wrap:wrap; ">
+            <div style="width:40wv;">
+                <img style="width:500px;height:300px;object-fit: cover"
+                    src="{{ asset('assets/images/products') }}/{{ $re->image }}" alt="{{ $re->name }}" />
+
+            </div>
+            <div style="width: 40vw;   ">
+                {{-- ========= --}}
+
+                <div style="display: flex; justify-content:space-between; width:100%; ">
+                    <div style="display: flex;   width:300px; align-items:flex-start;">
+                        <div style=" padding:10px; padding-top:0px; color:#808080;">
+                            <i class="fa fa-bath" aria-hidden="true"
+                                style="font-size: 50px"></i>{{ $re->size }}M<sup>2</sup>
+                        </div>
+                        <div style=" padding:10px; padding-top:0px; color:#808080;">
+                            <a href="#">
+                                <i class="fa fa-bath" aria-hidden="true"
+                                    style="font-size: 50px"></i>{{ $re->category->name }}</a>{{ $re->id }}
+                        </div>
+                    </div>
+
+                    <div style="">
+                        <h3 style="color: 		#CD853F">KSH {{ $re->price }}</h3>
+                    </div>
+                </div>
+                {{-- ========= --}}
+                <div>
+                    <h2>{{ $re->name }}</h2>
+                    <p>{{ $re->details }}</p>
+                    <div style="display: flex; margin-left:300px; width:200px;justify-content:space-around;">
+                        <span style="border:1px solid #CD853F; padding:2px 10px;">
+                            <a href="#" style="text-decoration: none;color:#CD853F;">CONTACT</a></span><span
+                            style="background: #CD853F; padding:2px 10px;"><a
+                                style="text-decoration: none;color:white;"
+                                href="{{ route('residence.details', ['id' => $re->id]) }}">DETAILS</a></span>
+                    </div>
+                </div>
+                {{-- ========= --}}
+            </div>
+
+        </div>
+        {{-- =======end of card======= --}}
+    @endforeach
